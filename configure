@@ -1372,6 +1372,7 @@ if [ $SYS = WINDOWS -a $ARCH = X86 -a $compiler = GNU ] ; then
 fi
 
 if [[ "$host_os" == *"androideabi"* ]]; then
+  :
 else
     if cc_check "stdio.h" "" "fseeko(stdin,0,0);" ; then
         define fseek fseeko
