@@ -37,6 +37,12 @@
 
 #define X264_ISDIGIT(x) isdigit((unsigned char)(x))
 
+#if HAVE_FSEEKO && !defined(__ANDROID__)
+#include <stdio.h>
+#define fseek fseeko
+#define ftell ftello
+#endif
+
 /****************************************************************************
  * x264_reduce_fraction:
  ****************************************************************************/
