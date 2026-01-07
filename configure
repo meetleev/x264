@@ -1371,7 +1371,7 @@ if [ $SYS = WINDOWS -a $ARCH = X86 -a $compiler = GNU ] ; then
     cc_check '' -fno-zero-initialized-in-bss && CFLAGS="$CFLAGS -fno-zero-initialized-in-bss"
 fi
 
-if [[ "$host_os" == *"androideabi"* ]]; then
+if [[ "$host_os" == *"android"* ]]; then
   :
 else
     if cc_check "stdio.h" "" "fseeko(stdin,0,0);" ; then
